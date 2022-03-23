@@ -1,0 +1,5 @@
+resource "aws_security_group" "example" {
+  # ... other configuration ...
+
+security_group_name =   "default"
+}
