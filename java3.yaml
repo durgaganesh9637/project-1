@@ -1,0 +1,17 @@
+sudo vi installJava8.yml
+
+---
+- hosts: My_Group
+  tasks:
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+    - name: Install Java using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - openjdk-8-jdk
