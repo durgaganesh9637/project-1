@@ -1,0 +1,21 @@
+Launch an EC2 instance using Terraform
+step-1
+install terraform on host device
+using these commands- from terraform.io
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install terraform
+step-2
+1-create a new directory
+2-create creds.tf provider
+-credentials module- access key,secret key,security token 
+step-3
+1-create main.tf module of resource
+steps-4
+1-terraform init - to downlaod the required providers
+2-terraform plan - to plan how to launch the service and check errors
+3-terraform apply - to launch resource from plan
+step-4
+add instance to default security_group
+step-5
+check creds.tf and main.tf for reference and for verification check my terraform.state
