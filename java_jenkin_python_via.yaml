@@ -1,8 +1,6 @@
-sudo vi installJava8.yml
-
 ---
  - hosts: webservers
-  tasks:
+   tasks:
     - name: Update APT package manager repositories cache
       become: true
       apt:
@@ -15,10 +13,11 @@ sudo vi installJava8.yml
       vars:
         packages:
            - default-jre
----
- 
- - hosts: webservers
-  
+           
+    - name: Install Python
+      raw: apt -y update && apt install -y python-minimal
+      when: check_python.rc != 0
+      
    tasks:
     - name: ensure the jenkins apt repository key is installed
       apt_key: url=https://pkg.jenkins.io/debian-stable/jenkins.io.key state=present
