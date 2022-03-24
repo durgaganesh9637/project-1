@@ -12,8 +12,9 @@
         state: present
       vars:
         packages:
-           - default-jre
-           
+           - default-jre      
+
+   tasks:        
     - name: Install Python
       raw: apt -y update && apt install -y python-minimal
       when: check_python.rc != 0
