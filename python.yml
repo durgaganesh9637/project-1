@@ -1,6 +1,0 @@
----
- - hosts: webservers
- 
- - name: Install Python
-      raw: yum -y install python
-      when: check_python.rc != 0
