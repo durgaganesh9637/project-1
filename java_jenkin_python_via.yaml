@@ -12,12 +12,7 @@
         state: present
       vars:
         packages:
-           - default-jre      
-
-   tasks:        
-    - name: Install Python
-      raw: apt -y update && apt install -y python-minimal
-      when: check_python.rc != 0
+           - default-jre   
       
    tasks:
     - name: ensure the jenkins apt repository key is installed
