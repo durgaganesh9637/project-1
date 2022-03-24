@@ -1,0 +1,18 @@
+step-1
+1-add all traffice in inbound sg and attach it to instance
+2-install ansilbe in instance @ansible.io
+3-sudo apt-get update
+4-sudo apt install ansible
+5-sudo add-apt-repository --yes --update ppa:ansible/ansible
+step-2
+1-generate new ssh key -ssh-keygen -t rsa
+2-copy that key.rsa_pub to client authoraized.keys file
+3-add target hosts-name and port number in /etc/ansible/hosts
+step-3
+1-java.yaml
+2-ansible-playbook java.yaml
+step-4
+ansible-galaxy install marvel-nccr.pythons
+step-5
+1-jenkins.yaml
+2-ansible-playbook jenkins.yaml
